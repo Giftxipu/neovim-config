@@ -16,5 +16,14 @@ end
 -- Add lazy.nvim to runtime path
 vim.opt.rtp:prepend(lazypath)
 
+-- Define events for "LazyFile"
+local events = { "BufReadPost", "BufNewFile", "BufWritePre" }
+
+vim.api.nvim_create_autocmd(events, {
+    group = vim.api.nvim_create_augroup("LazyFile", { clear = true }),
+    callback = function()
+        vim.api.nvim_exec_autocmds("User", { pattern = "LazyFile" })
+    end,
+})
 -- Setup lazy.nvim with your plugins configuration
 require("lazy").setup("plugins")
