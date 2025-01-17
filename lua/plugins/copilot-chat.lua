@@ -7,9 +7,9 @@ return {
       { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
       { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
     },
-    build = "make tiktoken", -- Only on MacOS or Linux
+    build = "make tiktoken",
     opts = {
-      debug = false, -- Enable debugging
+      debug = false, 
       model = "claude-3.5-sonnet",
       question_header = '## User ', -- Header to use for user questions
       answer_header = '## Copilot ', -- Header to use for AI answers
