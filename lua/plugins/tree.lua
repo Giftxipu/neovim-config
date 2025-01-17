@@ -1,15 +1,15 @@
 return{
     {
     "nvim-tree/nvim-tree.lua",
-    lazy = false, -- Load immediately
+    lazy = false, 
     dependencies = {
-      "nvim-tree/nvim-web-devicons", -- Optional, for file icons
+      "nvim-tree/nvim-web-devicons", 
     },
     config = function()
       require("nvim-tree").setup({
         view = {
-          width = 30, -- Width of the explorer
-          side = "left", -- Position: "left" or "right"
+          width = 30, 
+          side = "left", 
         },
         renderer = {
           highlight_opened_files = "name",
