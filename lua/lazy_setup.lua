@@ -1,4 +1,4 @@
--- Define the path where lazy.nvim will be installed
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 -- Auto-install lazy.nvim if not present
